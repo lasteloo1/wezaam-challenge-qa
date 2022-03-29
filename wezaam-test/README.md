@@ -1,5 +1,4 @@
 #### Autotests project description:
-
 - BDD framework: `Java`  + `Cucumber` + `RestAssured`
 - JDK version: `Bellsoft Liberica JDK (13)` (https://bell-sw.com/pages/downloads/)
 - Build automation tool: `Maven` (https://maven.apache.org/download.cgi)
@@ -19,4 +18,4 @@
 - You can also run the autotests from `TestRunner.java`
 - Feature-file with test scenarios is in the file `src/test/resources/features/Withdrawal.feature`
 ---
-If you have any questions or comments - my e-mail is `ooletsal@gmail.com`
+If you have any questions or comments - my e-mail is `ooletsal@gmail.com` (Aleksandra)
