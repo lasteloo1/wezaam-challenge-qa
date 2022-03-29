@@ -58,7 +58,7 @@ public class StepDefs {
         response = request.get(path);
     }
 
-    @Given("^(?:.*) is doing a POST request by path \'(.*)\' with parameters:$")
+    @Given("^(?:.*) is doing a POST request by path \'(.*)\':$")
     public void userSendsPostRequest(String path, String requestBody) {
 
         String replacedRequestBody = TestVariable.replaceAllVariables(requestBody);

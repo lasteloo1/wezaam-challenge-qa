@@ -8,7 +8,7 @@ Feature: Service for transferring money from company to employee accounts
   Scenario: 01 Successful response from the Service: number of withdrawals < maxWithdrawals, sum of withdrawals < maxWithdrawalAmount, executeAt = current time
 
     Given save the current time
-    When Marty is doing a POST request by path '/v1/withdrawals/users/1/payment-methods/1' with parameters:
+    When Marty is doing a POST request by path '/v1/withdrawals/users/1/payment-methods/1':
     """
 [
    {
@@ -42,7 +42,7 @@ Feature: Service for transferring money from company to employee accounts
   Scenario: 02 Successful response from the Service: number of withdrawals = maxWithdrawals, sum of withdrawals < maxWithdrawalAmount, executeAt = current time
 
     Given save the current time
-    When Doc is doing a POST request by path '/v1/withdrawals/users/2/payment-methods/1' with parameters:
+    When Doc is doing a POST request by path '/v1/withdrawals/users/2/payment-methods/1':
     """
 [
    {
@@ -90,7 +90,7 @@ Feature: Service for transferring money from company to employee accounts
   Scenario: 03 Successful response from the Service: number of withdrawals < maxWithdrawals, sum of withdrawals = maxWithdrawalAmount, executeAt = current time
 
     Given save the current time
-    When Einstein is doing a POST request by path '/v1/withdrawals/users/1/payment-methods/1' with parameters:
+    When Einstein is doing a POST request by path '/v1/withdrawals/users/1/payment-methods/1':
     """
 [
    {
@@ -149,7 +149,7 @@ Feature: Service for transferring money from company to employee accounts
   Scenario: 05 Checking of the worker's processing
 
     Given save the current time
-    When George is doing a POST request by path '/v1/withdrawals/users/1/payment-methods/1' with parameters:
+    When George is doing a POST request by path '/v1/withdrawals/users/1/payment-methods/1':
     """
 [
    {
@@ -172,7 +172,7 @@ Feature: Service for transferring money from company to employee accounts
   Scenario: 06 Successful response from the Service: executeAt = future time
 
     Given save the future time
-    When Marty is doing a POST request by path '/v1/withdrawals/users/1/payment-methods/1' with parameters:
+    When Marty is doing a POST request by path '/v1/withdrawals/users/1/payment-methods/1':
     """
 [
    {
@@ -195,7 +195,7 @@ Feature: Service for transferring money from company to employee accounts
   Scenario: 07 Error response from the Service: sum of withdrawals > maxWithdrawalAmount
 
     Given save the current time
-    When Biff is doing a POST request by path '/v1/withdrawals/users/1/payment-methods/1' with parameters:
+    When Biff is doing a POST request by path '/v1/withdrawals/users/1/payment-methods/1':
     """
 [
    {
@@ -216,7 +216,7 @@ Feature: Service for transferring money from company to employee accounts
   Scenario: 08 Error response from the Service: number of withdrawals > maxWithdrawals
 
     Given save the current time
-    When Marvin is doing a POST request by path '/v1/withdrawals/users/1/payment-methods/1' with parameters:
+    When Marvin is doing a POST request by path '/v1/withdrawals/users/1/payment-methods/1':
     """
 [
    {
@@ -253,7 +253,7 @@ Feature: Service for transferring money from company to employee accounts
   Scenario: 09 Error response from the Service: number of withdrawals > maxWithdrawals, sum of withdrawals > maxWithdrawalAmount
 
     Given save the current time
-    When Jennifer is doing a POST request by path '/v1/withdrawals/users/1/payment-methods/1' with parameters:
+    When Jennifer is doing a POST request by path '/v1/withdrawals/users/1/payment-methods/1':
     """
 [
    {
@@ -291,7 +291,7 @@ Feature: Service for transferring money from company to employee accounts
 #  Scenario: 10 Error response from the Service: attempt to pass a non-existent user
 
 #    Given save the current time
-#    When Jules is doing a POST request by path '/v1/withdrawals/users/99/payment-methods/1' with parameters:
+#    When Jules is doing a POST request by path '/v1/withdrawals/users/99/payment-methods/1':
 #    """
 #[
 #   {
@@ -308,7 +308,7 @@ Feature: Service for transferring money from company to employee accounts
 #  Scenario: 11 Error response from the Service: attempt to pass a parameter executeAt < currentTime
 
 #    # "executeAt":0 = "1970-01-01T00:00:00Z"
-#    When Verne is doing a POST request by path '/v1/withdrawals/users/1/payment-methods/1' with parameters:
+#    When Verne is doing a POST request by path '/v1/withdrawals/users/1/payment-methods/1':
 #    """
 #[
 #   {
