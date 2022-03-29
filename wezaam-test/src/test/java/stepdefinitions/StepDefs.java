@@ -81,12 +81,12 @@ public class StepDefs {
 
         String expectedMessageReplaced = TestVariable.replaceAllVariables(expectedMessage);
         String expectedMessageWithNoGaps = expectedMessageReplaced.replace(" ", "").replace("\r\n", "");
-        String messageWithNoGaps = response.getBody().asString().replace(" ", "");
+        String actualMessageWithNoGaps = response.getBody().asString().replace(" ", "");
 
-        Assert.assertTrue(messageWithNoGaps.contains(expectedMessageWithNoGaps));
+        Assert.assertTrue(actualMessageWithNoGaps.contains(expectedMessageWithNoGaps));
     }
 
-    @Given("^save ID № (.*) from the response message in the variable '(.*)'$")
+    @Given("^save ID № (.*) from the response message into the variable '(.*)'$")
     public void saveIdFromResponseMessageIntoVar(int idNumber, String varName) {
 
         switch (idNumber) {
@@ -110,7 +110,6 @@ public class StepDefs {
 
         String replacedId = TestVariable.replaceAllVariables(id);
         String path = "/v1/withdrawals/" + replacedId;
-
 
         RestAssured.baseURI = BASE_URL;
         RequestSpecification request = RestAssured.given();

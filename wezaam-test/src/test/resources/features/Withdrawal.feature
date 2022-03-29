@@ -19,7 +19,7 @@ Feature: Service for transferring money from company to employee accounts
     """
 
     Then Marty receives the response with the code '200'
-    And save ID № 1 from the response message in the variable '##ID1##'
+    And save ID № 1 from the response message into the variable '##ID1##'
 
     And the response message contains:
     """
@@ -57,8 +57,8 @@ Feature: Service for transferring money from company to employee accounts
     """
 
     Then Doc receives the response with the code '200'
-    And save ID № 1 from the response message in the variable '##ID1##'
-    And save ID № 2 from the response message in the variable '##ID2##'
+    And save ID № 1 from the response message into the variable '##ID1##'
+    And save ID № 2 from the response message into the variable '##ID2##'
 
     And the response message contains:
     """
@@ -101,7 +101,7 @@ Feature: Service for transferring money from company to employee accounts
     """
 
     Then Einstein receives the response with the code '200'
-    And save ID № 1 from the response message in the variable '##ID1##'
+    And save ID № 1 from the response message into the variable '##ID1##'
 
     And the response message contains:
     """
@@ -160,7 +160,7 @@ Feature: Service for transferring money from company to employee accounts
     """
 
     Then George receives the response with the code '200'
-    And save ID № 1 from the response message in the variable '##ID1##'
+    And save ID № 1 from the response message into the variable '##ID1##'
 
     And wait for 100 ms
     And the record with the status 'PENDING' and ID '##ID1##' is created in DB
@@ -183,7 +183,7 @@ Feature: Service for transferring money from company to employee accounts
     """
 
     Then Marty receives the response with the code '200'
-    And save ID № 1 from the response message in the variable '##ID1##'
+    And save ID № 1 from the response message into the variable '##ID1##'
 
     And wait for 6000 ms
     And the record with the status 'PENDING' and ID '##ID1##' is created in DB
@@ -206,7 +206,7 @@ Feature: Service for transferring money from company to employee accounts
     """
 
     Then Biff receives the response with the code '200'
-    And save ID № 1 from the response message in the variable '##ID1##'
+    And save ID № 1 from the response message into the variable '##ID1##'
     And the response message contains:
     """
         "status": "FAILED"
@@ -243,7 +243,7 @@ Feature: Service for transferring money from company to employee accounts
     """
 
     Then Marvin receives the response with the code '200'
-    And save ID № 1 from the response message in the variable '##ID1##'
+    And save ID № 1 from the response message into the variable '##ID1##'
     And the response message contains:
     """
         "status": "FAILED"
@@ -280,7 +280,7 @@ Feature: Service for transferring money from company to employee accounts
     """
 
     Then Jennifer receives the response with the code '200'
-    And save ID № 1 from the response message in the variable '##ID1##'
+    And save ID № 1 from the response message into the variable '##ID1##'
     And the response message contains:
     """
         "status": "FAILED"
