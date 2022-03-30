@@ -35,8 +35,8 @@ public class StepDefs {
     }
 
     /**
-     * Saves the time in seconds from the epoch of 1970-01-01T00:00:00Z to current moment +10 seconds into the variable ##currentDate##
-     * Saves the current time +10 seconds into the variable ##formattedCurrentDate## in format yyyy-MM-ddTHH:mm:ssZ
+     * Saves the time in seconds from the epoch of 1970-01-01T00:00:00Z to current moment +10 seconds into the variable ##currentDate+10sec##
+     * Saves the current time +10 seconds into the variable ##formattedCurrentDate+10sec## in format yyyy-MM-ddTHH:mm:ssZ
      *
      * Step for testing service's behaviour with future dates
      */
